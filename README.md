@@ -27,10 +27,10 @@ Utöka programmet
 1)    I PastureGUI skapas en JButton för startknappen. Lägg till en knapp ’Stop’ samt en knapp ’Exit’. Stop-knappen ska stoppa simuleringen medans exit-knappen ska avbryta programmet. För att avbryta programmet kan du skriva System.exit(0);
 
 Följande steg måste göras:
-a)     Skapa knapparna.
-b)    Ändra GridLayouten på JPanel buttons så att det får plats tre knappar och lägg till de nya knapparna.
-c)     Lägg till Actionlisteners till de nya knapparna.
-d)    Implementera Actionevents för de nya knapparna.
+a) Skapa knapparna.
+b) Ändra GridLayouten på JPanel buttons så att det får plats tre knappar och lägg till de nya knapparna.
+c) Lägg till Actionlisteners till de nya knapparna.
+d) Implementera Actionevents för de nya knapparna.
 
 2)    Skapa en abstrakt klass LivingThing som implementerar gränssnittet Entity. Klassen ska implementera metoderna getPosition och setPosition (Vilka kan tas från Dummy) medan de andra i gränssnittet Entity ska vara abstrakta.
 
