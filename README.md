@@ -1,7 +1,7 @@
 Detta är en uppgift i kursen Programmering 2.
 
 Sheep vs Wolves
-===============
+===
 Den här uppgiften går ut på att göra en simulering av ett ekosystem bestående av vargar, får och växter. Bifogat till denna uppgift finns ett grafiskt gränssnitt som är uppbyggt av olika delar. Testa först att kompilera och köra programmet (PastureGUI är den körbara klassen) för att se hur det fungerar (Bry dig inte om att det åstadkommer exekveringsfel än).
 
 Repositoryt finns här: https://github.com/TOENITG/sheep-vs-wolves
@@ -12,27 +12,28 @@ Du behöver flytta alla bildfiler till bin-mappen i ditt projekt. Gör det i utf
 Kontrollera att PastureGUI går att köra.
 
 Uppvärmning
------------
+---
 Dummy-objektet i simulationen rör sig enbart åt höger och bryr sig inte om att planen tar slut.
 Editera filen Dummy.java och ändra så att dummyn istället rör sig i en slumpmässig riktning.
 Gör så att dummyn inte flyttar om den håller på att röra sig utanför gränsen för planen.
 Lägg till några fler dummys som rör sig på planen.
 
 Förklara koden
---------------
+---
 Gå igenom koden till klasserna PastureGUI och Pasture och försök förstå hur den fungerar. Skriv en förklaring vad de olika metoderna gör och vad de olika instansvariablerna används till. Förklara även hur de hänger ihop med varandra. Detta kan du göra direkt i koden.
 
 Utöka programmet
-----------------
-1)    I PastureGUI skapas en JButton för startknappen. Lägg till en knapp ’Stop’ samt en knapp ’Exit’. Stop-knappen ska stoppa simuleringen medans exit-knappen ska avbryta programmet. För att avbryta programmet kan du skriva System.exit(0);
+---
+1)    I PastureGUI skapas en JButton för startknappen. Lägg till en knapp ’Stop’ samt en knapp ’Exit’. Stop-knappen ska stoppa simuleringen medans exit-knappen ska avbryta programmet. För att avbryta programmet kan du skriva `System.exit(0);`
 
 Följande steg måste göras:
-a) Skapa knapparna.
-b) Ändra GridLayouten på JPanel buttons så att det får plats tre knappar och lägg till de nya knapparna.
-c) Lägg till Actionlisteners till de nya knapparna.
-d) Implementera Actionevents för de nya knapparna.
 
-2)    Skapa en abstrakt klass LivingThing som implementerar gränssnittet Entity. Klassen ska implementera metoderna getPosition och setPosition (Vilka kan tas från Dummy) medan de andra i gränssnittet Entity ska vara abstrakta.
+* Skapa knapparna.
+* Ändra GridLayouten på JPanel buttons så att det får plats tre knappar och lägg till de nya knapparna.
+* Lägg till Actionlisteners till de nya knapparna.
+* Implementera Actionevents för de nya knapparna.
+
+2) Skapa en abstrakt klass LivingThing som implementerar gränssnittet Entity. Klassen ska implementera metoderna getPosition och setPosition (Vilka kan tas från Dummy) medan de andra i gränssnittet Entity ska vara abstrakta.
 
 3)    Skapa en subklass Plant till LivingThing. En växt ska ’växa’ efter ett visst antal tick i slumpmässig riktning. (Dvs skapa en ny växt). Använd ’plant.gif’ för att representera växten grafiskt. Testa klassen genom att lägga till några plantor i konstruktorn till Pasture.
 
@@ -44,17 +45,19 @@ d) Implementera Actionevents för de nya knapparna.
 
 7)    Testa med olika värden på antalet får, vargar och plantor och deras egenskaper så att inga arter dör ut på så lång tid som möjligt.
 
-Extrauppgifter:
+Extrauppgifter
+---
+* Ge djuren möjlighet att röra sig olika fort (de flyttar efter ett visst antal tick)
 
--       Ge djuren möjlighet att röra sig olika fort (de flyttar efter ett visst antal tick)
+* Se till så att alla ändringar av positioner sker i klassen Pasture ( För att öka stabiliteten av programmet).
 
--       Se till så att alla ändringar av positioner sker i klassen Pasture ( För att öka stabiliteten av programmet).
+* Lägg till metoder för får och vargar så att de kan föröka sig vid en viss tidpunkt (Förslagsvis när de har levt ett visst antal ticks och är mätta)
 
--       Lägg till metoder för får och vargar så att de kan föröka sig vid en viss tidpunkt (Förslagsvis när de har levt ett visst antal ticks och är mätta)
+* Skapa ett till grafiskt gränssnitt där man kan ange olika parametrar till programmet ( Antal får, vargar, plantor, djurens egenskaper osv)
 
--       Skapa ett till grafiskt gränssnitt där man kan ange olika parametrar till programmet ( Antal får, vargar, plantor, djurens egenskaper osv)
-
-Redovisning:
+Redovisning
+---
 Följande ska lämnas in:
--       Beskrivningen av PastureGUI och Pasture
--       Kommenterad källkod till de olika klasserna
+
+* Beskrivningen av PastureGUI och Pasture
+* Kommenterad källkod till de olika klasserna
